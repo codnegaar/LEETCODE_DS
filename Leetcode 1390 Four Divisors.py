@@ -30,23 +30,25 @@ from typing import List
 
 class Solution:
     def sumFourDivisors(self, nums: List[int]) -> int:
-        def four_div_sum(n: int) -> int:
-            s = 0
-            cnt = 0
+        def get_sum_if_four_divisors(number: int) -> int:
+            divisor_count = 0
+            divisor_sum = 0
 
-            for d in range(1, int(n ** 0.5) + 1):
-                if n % d == 0:
-                    d2 = n // d
+            for divisor in range(1, int(number ** 0.5) + 1):
+                if number % divisor == 0:
+                    paired_divisor = number // divisor
 
-                    cnt += 1
-                    s += d
-                    if d != d2:
-                        cnt += 1
-                        s += d2
+                    divisor_count += 1
+                    divisor_sum += divisor
 
-                    if cnt > 4:
+                    if paired_divisor != divisor:
+                        divisor_count += 1
+                        divisor_sum += paired_divisor
+
+                    if divisor_count > 4:
                         return 0
 
-            return s if cnt == 4 else 0
+            return divisor_sum if divisor_count == 4 else 0
 
-        return sum(four_div_sum(n) for n in nums)
+        return sum(get_sum_if_four_divisors(num) for num in nums)
+
