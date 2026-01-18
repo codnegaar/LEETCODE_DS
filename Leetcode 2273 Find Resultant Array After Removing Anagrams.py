@@ -1,5 +1,5 @@
 '''
-2273 Find Resultant Array After Removing Anagrams
+Leetcode 2273 Find Resultant Array After Removing Anagrams
  
 You are given a 0-indexed string array words, where words[i] consists of lowercase English letters.
 
