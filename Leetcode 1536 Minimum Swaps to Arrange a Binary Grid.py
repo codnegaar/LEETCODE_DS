@@ -59,3 +59,41 @@ class Solution(object):
                 j -= 1
 
         return swaps
+
+
+
+# Better Solution
+from typing import List
+
+class Solution:
+    def minSwaps(self, grid: List[List[int]]) -> int:
+        n = len(grid)
+
+        # Step 1: Count trailing zeros for each row
+        trailing = []
+        for row in grid:
+            count = 0
+            for v in reversed(row):
+                if v == 0:
+                    count += 1
+                else:
+                    break
+            trailing.append(count)
+
+        swaps = 0
+
+        # Step 2: Greedy row placement
+        for i in range(n):
+            required = n - 1 - i
+
+            j = i
+            while j < n and trailing[j] < required:
+                j += 1
+
+            if j == n:
+                return -1
+
+            swaps += j - i
+            trailing.insert(i, trailing.pop(j))
+
+        return swaps
