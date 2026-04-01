@@ -35,7 +35,6 @@ Constraints:
         directions[i] == 'L' or directions[i] == 'R'
         All values in positions are distinct
 
-
 '''
 
 from typing import List
