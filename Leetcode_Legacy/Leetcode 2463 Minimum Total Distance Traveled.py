@@ -1,5 +1,4 @@
 ﻿'''
-
 Leetcode 2463 Minimum Total Distance Traveled
 
 There are some robots and factories on the X-axis. You are given an integer array robot where robot[i] is the position of the ith robot.
