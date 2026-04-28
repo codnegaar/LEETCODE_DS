@@ -1,5 +1,4 @@
 ﻿'''
-
 Leetcode 2033 Minimum Operations to Make a Uni-Value Grid
 
 You are given a 2D integer grid of size m x n and an integer x. In one operation, you can add x to or subtract x from any element in the grid.
