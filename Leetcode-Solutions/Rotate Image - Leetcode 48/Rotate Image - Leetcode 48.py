@@ -17,3 +17,19 @@ class Solution:
         
         # Time: O(n^2)
         # Space: O(1)
+
+# second solution
+
+from typing import List
+
+class Solution:
+    def rotate(self, matrix: List[List[int]]) -> None:
+        n = len(matrix)
+
+        for row in range(n):
+            for col in range(row + 1, n):
+                matrix[row][col], matrix[col][row] = matrix[col][row], matrix[row][col]
+
+        for row in range(n):
+            for col in range(n // 2):
+                matrix[row][col], matrix[row][n - col - 1] = matrix[row][n - col - 1], matrix[row][col]
