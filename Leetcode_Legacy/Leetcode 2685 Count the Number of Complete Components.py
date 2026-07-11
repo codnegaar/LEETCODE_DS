@@ -18,7 +18,7 @@ Example 2:
         Output: 1
         Explanation: The component containing vertices 0, 1, and 2 is complete since there is an edge between every pair of two vertices. 
        On the other hand, the component containing vertices 3, 4, and 5 is not complete since there is no edge between vertices 4 and 5. Thus, the number of complete components in this graph is 1.
-         
+                
 Constraints:        
         1 <= n <= 50
         0 <= edges.length <= n * (n - 1) / 2
@@ -26,7 +26,6 @@ Constraints:
         0 <= ai, bi <= n - 1
         ai != bi
         There are no repeated edges.
-
 '''
 
 class Solution:
