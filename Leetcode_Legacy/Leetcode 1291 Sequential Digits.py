@@ -1,4 +1,5 @@
 ﻿'''
+ 
 Leetcode 1291 Sequential Digits
 
 An integer has sequential digits if and only if each digit in the number is one more than the previous digit.
