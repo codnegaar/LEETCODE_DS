@@ -1,4 +1,5 @@
 '''
+
 Leetcode 2029 Stone Game IX
  
 Alice and Bob continue their games with stones. There is a row of n stones, and each stone has an associated value. You are given an integer array stones, where stones[i] is the value of the ith stone.
