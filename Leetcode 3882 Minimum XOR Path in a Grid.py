@@ -1,6 +1,7 @@
 '''
 
 Leetcode 3882 Minimum XOR Path in a Grid
+
  
 You are given a 2D integer array grid of size m * n.
 
